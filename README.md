@@ -34,6 +34,7 @@ Kodu adım adım inceleyelim:
 -MEDV: Sahibi tarafından kullanılan evlerin ortalama değeri 1000$ (hedef değişken)
 
    Veri setindeki konut fiyatlarının aralığını ve dağılımını anlamaya yardımcı olması için histogramları kullanarak Boston'daki farklı mahallelerdeki ortalama konut fiyatlarının dağılımı görselleştirildi.
+   
    ![indir (3)](https://github.com/BilgeGoksel/Gradient-Descent/assets/163318769/5cc0732b-b9bb-4653-a672-f9b9850eca89)
 
    -Sağa çarpık bir dağılım, düşük ila orta fiyatlı mülklerin sayısına kıyasla çok yüksek fiyatlara sahip mülklerin sayısının daha az olduğunu gösterir.
