@@ -15,14 +15,31 @@ Kodu adım adım inceleyelim:
 
 ### 2) Veriyi Ayırma (Split data):
    Veriyi eğitim ve test için random şekilde ayırıyoruz. Burada hedef değişkenimiz MEDV (ev fiaytlarının medyanı) kolonu olacak.
+   ```
+   #split data
+   x=df.drop(columns=["MEDV"])
+   y=df["MEDV"]
+   ```
+  ```
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(x,y,random_state=2529)
+  ```
 ### 3) Parametreleri Tanımlama :
    Ağırlıkları (weights) ve bias değerini random tanımlıyoruz.
+   ```
+# ağırlıklar
+w_init = np.random.rand(len(x.keys()))
+# bias
+b_init = rd.random()
+   ```
 
 ### 4) Fonksiyonlar:
-- `compute_cost` fonksiyonunda gerçek ve tahmin edilen hedef değer arasındaki fark olan hatayı hesaplanır ardından cost değeri döndürülür.
+- `compute_cost` fonksiyonunda gerçek ve tahmin edilen hedef değer arasındaki fark olan hata hesaplanır ardından cost değeri döndürülür.
   ![Ekran görüntüsü 2024-05-04 180356](https://github.com/BilgeGoksel/Gradient-Descent/assets/163318769/b70f85c1-152e-4d30-b827-588bd6028299)
   
 - `compute_gradients` fonksiyonunda predict fonksiyonu kullanılarak,bir dögü içerisinde girdi ve mevcut ağırlıklar ile tahmin edilen çıktı elde edilir.Hata hesaplanır. 'dw' ve 'db' değerleri güncellenir. Hata ve girdinin çaarpımı gradyanlara eklenir.Döngü bittiğinde, dw ve db değerleri tüm örnekler için hesaplanan gradyanların ortalamasını almak için örnek sayısına (m) bölünür.
 - `gradient_descent` her iterasyonda maliyet değerini tutmak için  'cost' listesi oluşturur. Belirlenen iterasyon sayısı kadar ( 100 tane seçildi.) compute_gradients fonksiyonu çağrılarak, mevcut ağırlıklar ve bias için gradyanlar hesaplanır. Bunlar learning_rate ile gradyanlar çarpılarak güncellenir. Güncellenmiş ağırlıklar ve bias ile eğitim verileri üzerindeki maliyet hesaplanır (compute_cost fonksiyonu kullanılarak).Her iterasyonun numarası ve hesaplanan maliyet değeri ekrana yazdırılır.
-  
+  ![Ekran görüntüsü 2024-05-04 180415](https://github.com/BilgeGoksel/Gradient-Descent/assets/163318769/37646a7e-e7f8-47a1-8dde-c2b4abbc0ffc)
     
+### Yorumlar ve Sonuçlar:
+Her bir iterasyona göre maliyetlere baktığımızda maliyet fonksiyonunun hızla arttığını gözlemleriz. Öğrenme hızı çok küçük seçildiğinden her iterasyonda ağırlıklar ve bias'lar çok az miktarda güncelleniyor.Maliyet fonksiyonunun bu şekilde hızla artması, gradyan inişinin yakınsama noktasına ulaşmadığını veya en azından yeterli hızda yaklaşmadığını gösteriyor olabilir. İterasyon sayısını arttırmak veya öğrenme oranını büyütmek daha düşük maliyet ile daha iyi sonuçlar verebilir.
