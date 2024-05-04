@@ -20,6 +20,9 @@ Kodu adım adım inceleyelim:
 
 ### 4) Fonksiyonlar:
 - `compute_cost` fonksiyonunda gerçek ve tahmin edilen hedef değer arasındaki fark olan hatayı hesaplanır ardından cost değeri döndürülür.
+  ![Ekran görüntüsü 2024-05-04 180356](https://github.com/BilgeGoksel/Gradient-Descent/assets/163318769/b70f85c1-152e-4d30-b827-588bd6028299)
+  
 - `compute_gradients` fonksiyonunda predict fonksiyonu kullanılarak,bir dögü içerisinde girdi ve mevcut ağırlıklar ile tahmin edilen çıktı elde edilir.Hata hesaplanır. 'dw' ve 'db' değerleri güncellenir. Hata ve girdinin çaarpımı gradyanlara eklenir.Döngü bittiğinde, dw ve db değerleri tüm örnekler için hesaplanan gradyanların ortalamasını almak için örnek sayısına (m) bölünür.
 - `gradient_descent` her iterasyonda maliyet değerini tutmak için  'cost' listesi oluşturur. Belirlenen iterasyon sayısı kadar ( 100 tane seçildi.) compute_gradients fonksiyonu çağrılarak, mevcut ağırlıklar ve bias için gradyanlar hesaplanır. Bunlar learning_rate ile gradyanlar çarpılarak güncellenir. Güncellenmiş ağırlıklar ve bias ile eğitim verileri üzerindeki maliyet hesaplanır (compute_cost fonksiyonu kullanılarak).Her iterasyonun numarası ve hesaplanan maliyet değeri ekrana yazdırılır.
+  
     
