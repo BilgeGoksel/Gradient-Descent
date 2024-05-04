@@ -6,6 +6,33 @@ Kodu adım adım inceleyelim:
 ### 1)Veri Seti :
    
    Bu algoritma için Boston' daki ev fiyatlarını çeşitli özelliklerine göre (kişi başına düşen suç oranı, konut başına düşen ortalama oda sayısı vs.) inceleyen bir veri seti kullanıldı.
+   
+  ##### Kolonlar:
+   
+-CRIM: şehirlere göre kişi başına düşen suç oranı
+
+-ZN: 25.000 m²'nin üzerindeki parseller için imar edilen konut arazilerinin oranı.
+
+-INDUS: kasaba başına perakende olmayan iş alanlarının oranı
+
+-CHAS: Charles Nehri kukla değişkeni (eğer alan nehri sınırlıyorsa 1; aksi takdirde 0) 
+
+-NOX: nitrik oksit konsantrasyonu (10 milyonda bir)
+
+-RM: konut başına ortalama oda sayısı YAŞ: 1940'tan önce inşa edilen, sahibi tarafından kullanılan birimlerin oranı
+
+-DIS: Boston'daki beş istihdam merkezine olan ağırlıklı mesafeler
+
+-RAD: radyal otoyollara erişilebilirlik endeksi
+
+-TAX: (10.000$) başına tam değerli emlak vergisi oranı
+
+-PTRATIO: şehre göre öğrenci-öğretmen oranı
+
+-LSTAT: Nüfusun daha düşük statüsünün yüzdesi
+
+-MEDV: Sahibi tarafından kullanılan evlerin ortalama değeri 1000$ (hedef değişken)
+
    Veri setindeki konut fiyatlarının aralığını ve dağılımını anlamaya yardımcı olması için histogramları kullanarak Boston'daki farklı mahallelerdeki ortalama konut fiyatlarının dağılımı görselleştirildi.
    ![indir (3)](https://github.com/BilgeGoksel/Gradient-Descent/assets/163318769/5cc0732b-b9bb-4653-a672-f9b9850eca89)
 
